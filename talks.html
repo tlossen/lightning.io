@@ -1,0 +1,12 @@
+---
+layout: default
+title: Talks
+---
+
+<h2>Talks</h2>
+
+<ul>
+{% for post in site.posts %}
+<li><a href="{{ post.url }}">{{ post.title }}</a>, by <a href="{{ post.author_url }}">{{ post.author_name }}</a></li>
+{% endfor %}
+</ul>
