@@ -1,0 +1,32 @@
+---
+layout: default
+---
+
+<h2>{{ page.title }}</h2>
+<h3>by <a href="{{ page.author_url }}">{{ page.author_name}}</a></h3>
+
+<h4>Slides</h4>
+
+{% if page.slides_embed %}
+{{ page.slides_embed }}
+{% endif %}
+
+{% if page.slides_url %}
+<p><a href="{{ page.slides_url }}">(link)</a></p>
+{% endif %}
+
+{% if page.links %}
+<h4>Links</h4>
+
+<ul>
+{% for link in page.links %}
+<li><a href="{{ link }}">{{ link }}</a></li>
+{% endfor %}
+</ul>
+{% endif %}
+
+{{ content }}
+
+<hr />
+
+<a href="/talks.html">Back to Talks</a>

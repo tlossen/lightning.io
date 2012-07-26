@@ -1,0 +1,4 @@
+permalink: /:title.html
+markdown: rdiscount
+destination: public
+exclude: [public,config,Rakefile]
